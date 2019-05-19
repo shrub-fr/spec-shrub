@@ -18,7 +18,7 @@ This document is a pre-draft which will be submited to the WHATWG in order to up
 
 TODO
 
-## <a id="fetch"></a>Modification of the Fetch Standard
+## Modifications of the Fetch Standard
 
 In order to integrate the Shrub https subscheme, the following modifications of [the Fetch Standard](https://fetch.spec.whatwg.org/) are necessary.
 
@@ -165,5 +165,5 @@ TODO
 
 [net-error]: https://fetch.spec.whatwg.org/#concept-network-error "network error"
 [aborted]: https://infra.spec.whatwg.org/#if-aborted "aborted"
-[shrubbery-wellknown]: shrubbery.md#wellknown "The .well-known URIs suffix 'shrubbery'"
-[shoot-streaming]: shrubbery.md#streaming "ShootStreaming Algorithm"
+[shrubbery-wellknown]: shrubbery.md#the-well-known-uris-suffix-shrubbery "The .well-known URIs suffix 'shrubbery'"
+[shoot-streaming]: shrubbery.md#shootstreaming-algorithm "ShootStreaming Algorithm"
