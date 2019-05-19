@@ -99,7 +99,7 @@ _Pad_ is a padding function which takes as input a byte-string _In_ and returns 
    1. _k_ += 1
 1. Return _Out_
 
-## <a id="shoots"></a>Shoots
+## Shoots
 
 A shoot is a tuple (_K_, _Path_, _P_, _N_) where:
 
@@ -180,7 +180,7 @@ The tag of an internal node _Node_ is computed by the following algorithm:
 1. _Gimli-Absorb_(_S_, _Node_)
 1. Return _Gimli-Finalize_(_S_)
 
-## <a id="media"></a>The application/branch Media Type
+## The application/branch Media Type
 
 A file which media type is application/branch represents a branch of a shrub. The branch (and the file which represents it) has three attributes: a tag _TRoot_, a key _K_ and a path _Path_. _TRoot_ is the tag of the root of the shrub containing the branch. _K_ and _Path_ are the key and path of the shoot node at the end of the branch.
 
@@ -188,7 +188,7 @@ The file which represents a branch is the concatenation of the ancestry and the 
 The shoot is the shoot node which is at the end of the branch represented by the file.\
 The ancestry is the concatenation of all the internal nodes which are ancestors to the shoot node in depth-first-search pre-order (starting from the root of the shrub containing the shoot).
 
-## <a id="streaming"></a>ShootStreaming Algorithm
+## ShootStreaming Algorithm
 
 _ShootStreaming_ is a generator which takes four inputs, generates byte-strings, and returns one output. The four inputs are the tag _TRoot_ of the root of a shrub, the key _K_ and the path _Path_ of a shoot of the shrub, and a readable byte-stream _Str_ of the application/branch file which represents the branch of the shrub containing the shoot. _ShootStreaming_ generates the parts (_content_[0], ..., _content_[_p_]) of the plaintexts of the shoot. If all the parts have been generated, then _ShootStreaming_ returns the _EOF_ error, else it returns _STREAM_ERROR_.
 
@@ -240,7 +240,7 @@ The algorithm of _ShootStreaming_ is the following:
    1. _T_ = _Nonce_
 1. Return _EOF_
 
-## <a id="wellknown"></a>The .well-known URIs suffix "shrubbery"
+## The .well-known URIs suffix "shrubbery"
 
 We define a mapping between branches of shrubs and HTTPS URLs that makes use of the .well-known URIs by defining a "shrubbery" suffix. These .well-known URIs are usefull for protocols and applications (such as [the Shrub https subscheme][shrub]) which need [to retrieve branches with low latency][shrub-fetch].
 
@@ -285,7 +285,7 @@ Restrictions on usage: N/A
 
 ### Assignment of the .well-known URIs suffix "shrubbery"
 
-## <a id="security"></a>Security Considerations
+## Security Considerations
 
 TODO
 
@@ -294,7 +294,7 @@ TODO
 TODO
 
 [shrub]: shrub.md "Shrub https subscheme"
-[shrub-fetch]: shrub.md#fetch "fetch protocol for Shrub https subscheme"
-[shoots]: #shoot-definition "Definition of Shoots"
-[security]: #security "Security Considerations"
-[media]: #media "The application/branch Media Type"
+[shrub-fetch]: shrub.md#modifications-of-the-fetch-standard "fetch protocol for Shrub https subscheme"
+[shoots]: #shoots "Definition of Shoots"
+[security]: #security-considerations "Security Considerations"
+[media]: #the-applicationbranch-media-type "The application/branch Media Type"
